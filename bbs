@@ -47,6 +47,7 @@ if(!empty($_POST["pw"]) && !empty($_POST["edit_number"])&& !empty($_POST["edit_m
 //削除機能
 if(!empty($_POST["pw"]) && !empty($_POST["delete_number"]) && !empty($_POST["delete_message"])){
     $deletenumber=$_POST["delete_number"];
+    $password=$_POST["pw"];
     $id = $deletenumber;
     $sql = 'SELECT * FROM data WHERE id=:id ';
     $stmt = $pdo->prepare($sql);
